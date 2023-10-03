@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #201b5a;
+    color: rgb(250, 246, 202);
+}
+
+.container {
+    background-color: #7e84ab81;
+    padding: 20px;
+}
+
+.id-card {
+    background-color: rgb(250, 246, 202);
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.id-photo {
+    flex: 1;
+    text-align: center;
+}
+
+.id-photo img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+.id-text {
+    flex: 2; /* Adjust flex to give more width to the text part */
+    padding: 20px;
+}
+
+.full-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.id-text p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .id-card {
+        flex-direction: column; 
+        max-width: 100%; 
+    }
+
+    .id-photo,
+    .id-text {
+        flex: none; 
+        max-width: 100%; 
+    }
+
+    .id-text {
+        padding: 10px; 
+    }
+}
+
+.full-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.id-text p {
+    margin: 5px 0;
+}
+
+.social-box {
+    background-color: rgb(250, 246, 202);
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    align-items: center;
+}
+
+.instagram-box,
+.shopee-box {
+    flex-basis: calc(50% - 10px); 
+    background-color: #201b5a;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+        .social-links-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+    .instagram-box,
+    .shopee-box {
+        flex: none; 
+        max-width: 100%; 
+        margin: 10px 0; 
+        align-items: center;
+    }
+
+h1, h2 {
+    text-align: center;
+}
+
+ul, ol {
+
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.checkbox-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.programming-experience{
+    align-items: center;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 40px;
+}
