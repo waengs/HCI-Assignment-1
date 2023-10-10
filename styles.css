@@ -1,20 +1,67 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
+  }
+  
+body{
+    background-color: #992020;
 }
-
-.header {
-    background-color: #201b5a;
-    color: rgb(250, 246, 202);
-}
-
-.container {
-    background-color: #7e84ab81;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #273b57;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Style for the heading within the navigation bar */
+  .heading h4 {
+    color: #c6d4e8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Style for the navigation links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  /* Style for individual navigation items */
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  /* Style for navigation links */
+  .nav-links a {
+    color: #c6d4e8;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style for the active navigation link */
+  .nav-links a.active {
+    background-color: #992020;
+  }
+  
+  /* Hover effect for navigation links */
+  .nav-links a:hover:not(.active) {
+    background-color: #ffe5ce;
+  }
+  
+  .container {
     padding: 20px;
 }
 
 .id-card {
-    background-color: rgb(250, 246, 202);
-    max-width: 400px;
+    background-color: #ffe5ce;
+    max-width: 600px;
     margin: 20px auto;
     border-radius: 5px;
     overflow: hidden;
@@ -34,21 +81,59 @@ body {
 }
 
 .id-text {
-    flex: 2; /* Adjust flex to give more width to the text part */
+    flex: 2; 
     padding: 20px;
 }
 
-.full-name {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .id-text p {
-    margin: 5px 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-@media (max-width: 768px) {
+.socialpage {
+    padding: 20px;
+    background-color: #273b57;
+    margin: 20px auto;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.image-box {
+    display: inline-block;
+    color: #273b57;
+    margin: 10px;
+    text-align: center;
+}
+
+.image-box img {
+    max-height: 200px;
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.image-text {
+    margin-top: 10px;
+    color: #c6d4e8;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu {
+    font-family: 'Courier New', Courier, monospace;
+    width: 25%;
+    float: left;
+    padding: 15px;
+    background-color: #ffe5ce;
+  }
+
+  .education {
+    width: 75%;
+    float: left;
+    padding: 15px;
+    background: #273b57;
+  }
+
+@media (max-width: 576px) {
     .id-card {
         flex-direction: column; 
         max-width: 100%; 
@@ -63,85 +148,36 @@ body {
     .id-text {
         padding: 10px; 
     }
-}
 
-.full-name {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.id-text p {
-    margin: 5px 0;
-}
-
-.social-box {
-    background-color: rgb(250, 246, 202);
-    max-width: 400px;
-    margin: 20px auto;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-}
-
-.social-links-container {
-    display: flex;
-    justify-content: center;
-    width: 100%; 
-    align-items: center;
-}
-
-.instagram-box,
-.shopee-box {
-    flex-basis: calc(50% - 10px); 
-    background-color: #201b5a;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-        .social-links-container {
-          flex-direction: column;
-          align-items: center;
-        }
+    .heading h4 {
+        font-size: 18px;
       }
+    
+      .nav-links a {
+        font-size: 14px;
+        padding: 8px 0;
+      }
+    
+}
 
-    .instagram-box,
-    .shopee-box {
-        flex: none; 
-        max-width: 100%; 
-        margin: 10px 0; 
-        align-items: center;
+
+  /* Media query for tablets */
+  @media (max-width: 768px) {
+    .heading h4 {
+      font-size: 20px;
     }
-
-h1, h2 {
-    text-align: center;
-}
-
-ul, ol {
-
-    padding: 0;
-    margin: 20px auto;
-    max-width: 400px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-.checkbox-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.programming-experience{
-    align-items: center;
-    text-align: center;
-}
-
-.section {
-    margin-bottom: 40px;
-}
+  
+    .nav-links {
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .nav-links a {
+      padding: 10px 0;
+    }
+  }
+  
